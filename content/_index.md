@@ -870,6 +870,7 @@ Make it clear how to get out.
 If your program hangs on network I/O etc, always make Ctrl-C still work.
 If it’s a wrapper around program execution where Ctrl-C can’t quit (SSH, tmux, telnet, etc), make it clear how to do that.
 For example, SSH allows escape sequences with the `~` escape character.
+The program should exit gracefully when it reaches the end-of-file for the input stream (EOF, commonly input using Ctrl-D).
 
 ### Subcommands
 
